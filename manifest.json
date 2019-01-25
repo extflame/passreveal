@@ -1,0 +1,39 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "PassReveal",
+	"description": "PassReveal allows you to see your written passwords from fields.",
+	"homepage_url": "http://www.passwordpeek.com",
+	"version": "0.0.1",
+
+	"icons": {
+		"16": "icons/reveal.png",
+		"48": "icons/48.png",
+		"128": "icons/128.png"
+	},
+
+	"background": { 
+		"scripts": ["background.js"] 
+	},
+
+	"browser_action": {
+		"name": "PassReveal",
+		"default_title": "Click to see if you're wrong!",
+		"default_icon": "icons/reveal.png"
+	},
+
+	"commands": {
+	},
+
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+
+	"minimum_chrome_version": "4.0",
+	"incognito": "split",
+	"offline_enabled": true
+}
